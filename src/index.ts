@@ -4,7 +4,7 @@ import * as mcnet from 'mojang-net';
 const client = new Client()
 
 //Address of your API Endpoint
-const playerPositionsEndpoint = "https://localhost:7206/playerpositions";
+const playerPositionsEndpoint = "http://localhost:5400/playerpositions";
 
 setInterval(() => {
   //Get All Players
@@ -31,7 +31,7 @@ setInterval(() => {
         break;
       }
     }
-    let playerPos = {"Name": player.getName(), "DimensionId": dimension, "xCoord": player.getLocation().x, "zCoord": player.getLocation().z, "Color": "Purple", "Visible": true}
+    let playerPos = {"Name": player.getName(), "DimensionId": dimension, "xCoord": player.getLocation().x, "zCoord": player.getLocation().z, "Color": "Yellow", "Visible": true}
     playerpositions.push(playerPos);
   });
   //Format Body for API format
